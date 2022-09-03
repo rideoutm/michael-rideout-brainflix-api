@@ -21,8 +21,8 @@ router.post("/", (req, res) => {
     channel: "Uploader Channel",
     image: "http://localhost:8080/images/Upload-video-preview.jpg",
     description: req.body.description,
-    views: Math.round(Math.random() * 100000), // format number
-    likes: Math.round(Math.random() * 10000), // format number
+    views: new Intl.NumberFormat().format(Math.round(Math.random() * 100000)), // format number
+    likes: new Intl.NumberFormat().format(Math.round(Math.random() * 10000)), // format number
     timestamp: Date.now(),
     comments: [
       {
